@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
+import "./App.css";
+import AddTasks from "./AddTasks";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <h1>Trellau</h1>
+          <nav>
+              <h1 className="title">~Trellau~</h1>
+          </nav>
         <AddTasks />
-        <footer>Made with Love</footer>
       </div>
     );
   }

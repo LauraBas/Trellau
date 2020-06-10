@@ -1,0 +1,52 @@
+
+.container {
+    width: 200px;
+    height: 150px;
+    border: 2px solid seagreen;
+    background-color: lightgrey;
+    opacity: 75%;
+    padding: 20px;
+    padding-top: 0px;
+    margin: 50px;
+    text-align: center;
+}
+
+.add {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.importance {
+    font-weight: bolder;
+    font-size: 12px;
+
+}
+
+.input {
+    width: 200px;
+
+}
+
+.btn {
+    width: 55px;
+    height: 25px;
+    border-radius: 53%;
+
+    margin: 5px;
+
+}
+
+#red {
+    background-color: lightcoral;
+    border: lightcoral;
+}
+
+#green {
+    background-color: #48c9a5;
+    border: #48c9a5;
+}
+
+#yellow {
+    background-color: bisque;
+    border: bisque;
+}
