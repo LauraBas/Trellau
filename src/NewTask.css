@@ -8,7 +8,7 @@
 .task {
 
     width: 200px;
-    height: 150px;
+    height: 125px;
     border: 2px solid seagreen;
     background-color: lightgrey;
     opacity: 75%;
@@ -23,6 +23,16 @@
     font-weight: bolder;
     padding: 5px;
 }
+.done{
+    font-weight: bolder;
+    padding: 5px;
+    background-color: #48c9a5;
+
+}
 i{
     padding: 2px;
+}
+.titleTask{
+    font-weight: bolder;
+    font-variant: all-small-caps;
 }

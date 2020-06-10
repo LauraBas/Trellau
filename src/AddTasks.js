@@ -32,10 +32,6 @@ class AddTasks extends React.Component {
                 <div className="container">
                     <p className="add">Add your task here</p>
                     <input value={this.state.input} onChange={this.handleChange} className="input"/>
-                    <p className="importance">Level of importance</p>
-                    <button className="btn" id="red">High</button>
-                    <button className="btn" id="yellow">Middle</button>
-                    <button className="btn" id="green">Low</button>
                     <button onClick={this.add} id="go">Add <i className="fa fa-thumbs-up"></i></button>
                 </div>
             </div>

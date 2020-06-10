@@ -6,6 +6,8 @@ const TaskItem = (props) => {
         <div>
             <div className="task">
                 <p className="titleTask">{props.toDo}</p>
+                <button className="done">Done
+                <i className="fa fa-check"></i></button>
                 <button className="delete">Delete
                 <i className="fa fa-trash"></i>
                 </button>
