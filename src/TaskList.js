@@ -4,10 +4,9 @@ import "./NewTask.css";
 
 const TaskList = (props) => {
     return (
-        <div>
-            <h2>{props.title}</h2>
+        <React.Fragment>
             {props.tasks.map(task => <TaskItem onDone={props.onDone} onRemove={props.onRemove} key={task.id} task={task}/>)}
-        </div>
+        </React.Fragment>
     );
 };
 

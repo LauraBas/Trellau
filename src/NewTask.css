@@ -7,32 +7,84 @@
 
 .task {
 
-    width: 200px;
+
     height: 125px;
     border: 2px solid seagreen;
     background-color: lightgrey;
     opacity: 75%;
     padding: 20px;
     padding-top: 0px;
-    margin: 50px;
+    margin: 8px;
     text-align: center;
 
 }
-.delete{
+
+.delete {
     background-color: lightcoral;
     font-weight: bolder;
     padding: 5px;
 }
-.done{
+
+.done {
     font-weight: bolder;
     padding: 5px;
     background-color: #48c9a5;
 
 }
-i{
+
+i {
     padding: 2px;
 }
-.titleTask{
+
+.titleTask {
     font-weight: bolder;
     font-variant: all-small-caps;
+}
+
+.state {
+    font-weight: bolder;
+
+}
+
+.subcontainer {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.hacer {
+    align-content: flex-start;
+    flex-grow: 5;
+    display: flex;
+    flex-wrap: wrap;
+    height: 34rem;
+    flex-direction: column;
+    overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #e1e187;
+}
+
+.hecho {
+    align-content: flex-start;
+    flex-grow: 0;
+    flex-wrap: wrap;
+    height: 34rem;
+    overflow-y: scroll;
+
+
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #e1e187;
 }

@@ -1,14 +1,16 @@
 
 .container {
-    width: 200px;
+    width: 40%;
     height: 125px;
     border: 2px solid seagreen;
     background-color: lightgrey;
     opacity: 75%;
     padding: 20px;
     padding-top: 0px;
-    margin: 50px;
+    margin: 8px;
     text-align: center;
+    border-bottom-left-radius: 54px;
+    border-top-right-radius: 54px;
 }
 
 .add {
@@ -26,7 +28,9 @@
 }
 
 .input {
-    width: 200px;
+    width: 195px;
+    height: 30px;
+    background-color: aliceblue;
 
 }
 

@@ -27,13 +27,15 @@ class TaskItem extends React.Component {
         return (
             <div className="task">
                 <p className="titleTask">{this.props.task.todo}</p>
-                <button onClick={this.done} className="done">Done
-                    <i className="fa fa-check"></i>
-                </button>
+                { !this.props.task.done &&
+                    <button onClick={this.done} className="done">Done
+                        <i className="fa fa-check"></i>
+                    </button>
+                }
                 <button onClick={this.remove} className="delete">Delete
                     <i className="fa fa-trash"></i>
                 </button>
-                <p>{this.props.task.done ? "done" : "not done"}</p>
+                <p className="state"> {this.props.task.done ? "Done" : "To Do"}</p>
             </div>
         );
     }

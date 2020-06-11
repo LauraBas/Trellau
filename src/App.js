@@ -11,7 +11,7 @@ class App extends Component {
             idCounter: 0
         }
         this.addTask = this.addTask.bind(this);
-        this.onRemove= this.onRemove.bind(this);
+        this.onRemove = this.onRemove.bind(this);
         this.onDone = this.onDone.bind(this);
     }
 
@@ -27,17 +27,19 @@ class App extends Component {
         const id = this.generateId();
         const obj = {todo: str, id: id, done: false}
         temp.push(obj)
-         this.setState({tasks: [...temp]})
+        this.setState({tasks: [...temp]})
     }
+
     onRemove(id) {
         function filterTaskNotWithThisId(task) {
-                return task.id !== id
+            return task.id !== id
         }
 
         this.setState({
             tasks: this.state.tasks.filter(filterTaskNotWithThisId)
         })
     }
+
     onDone(id) {
         let temp = [...this.state.tasks];
         let task = temp.find((t) => id === t.id);
@@ -52,8 +54,17 @@ class App extends Component {
                     <h1 className="title">~Trellau~</h1>
                 </nav>
                 <AddTasks addTask={this.addTask}/>
-                <TaskList title="toDo" tasks={this.state.tasks.filter((task) => !task.done )} onRemove={this.onRemove} onDone={this.onDone}/>
-                <TaskList title="done" tasks={this.state.tasks.filter((task) => task.done )} onRemove={this.onRemove} onDone={this.onDone}/>
+                <div className="subcontainer">
+                    <div className="hacer">
+                        <TaskList tasks={this.state.tasks.filter((task) => !task.done)} onRemove={this.onRemove}
+                                  onDone={this.onDone}/>
+                    </div>
+
+                    <div className= "hecho">
+                        <TaskList tasks={this.state.tasks.filter((task) => task.done)} onRemove={this.onRemove}
+                                  onDone={this.onDone}/>
+                    </div>
+                </div>
                 <footer id="chau">Made with Love</footer>
             </div>
         );
