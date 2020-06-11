@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import "./App.css";
 import AddTasks from "./AddTasks";
-import NewTasks from "./NewTasks";
+import TaskList from "./TaskList";
 
 class App extends Component {
     constructor(props) {
@@ -11,6 +11,8 @@ class App extends Component {
             idCounter: 0
         }
         this.addTask = this.addTask.bind(this);
+        this.onRemove= this.onRemove.bind(this);
+        this.onDone = this.onDone.bind(this);
     }
 
     generateId() {
@@ -23,9 +25,24 @@ class App extends Component {
     addTask = (str) => {
         let temp = [...this.state.tasks];
         const id = this.generateId();
-        const obj = {todo: str, id: id}
+        const obj = {todo: str, id: id, done: false}
         temp.push(obj)
          this.setState({tasks: [...temp]})
+    }
+    onRemove(id) {
+        function filterTaskNotWithThisId(task) {
+                return task.id !== id
+        }
+
+        this.setState({
+            tasks: this.state.tasks.filter(filterTaskNotWithThisId)
+        })
+    }
+    onDone(id) {
+        let temp = [...this.state.tasks];
+        let task = temp.find((t) => id === t.id);
+        task.done = true;
+        this.setState({tasks: temp})
     }
 
     render() {
@@ -35,7 +52,8 @@ class App extends Component {
                     <h1 className="title">~Trellau~</h1>
                 </nav>
                 <AddTasks addTask={this.addTask}/>
-                <NewTasks tasks={this.state.tasks} />
+                <TaskList title="toDo" tasks={this.state.tasks.filter((task) => !task.done )} onRemove={this.onRemove} onDone={this.onDone}/>
+                <TaskList title="done" tasks={this.state.tasks.filter((task) => task.done )} onRemove={this.onRemove} onDone={this.onDone}/>
                 <footer id="chau">Made with Love</footer>
             </div>
         );
