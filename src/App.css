@@ -16,3 +16,10 @@ h1 {
     padding: 8px;
 
 }
+#chau {
+    text-align: center;
+    font-family: cursive;
+    color: seagreen;
+    font-size: 18px;
+    font-weight: bolder;
+}

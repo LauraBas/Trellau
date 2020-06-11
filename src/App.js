@@ -7,15 +7,25 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            tasks: []
+            tasks: [],
+            idCounter: 0
         }
         this.addTask = this.addTask.bind(this);
     }
 
-    addTask(str) {
+    generateId() {
         this.setState({
-            tasks: this.state.tasks.concat(str)
+            idCounter: this.state.idCounter + 1
         })
+        return this.state.idCounter
+    }
+
+    addTask = (str) => {
+        let temp = [...this.state.tasks];
+        const id = this.generateId();
+        const obj = {todo: str, id: id}
+        temp.push(obj)
+         this.setState({tasks: [...temp]})
     }
 
     render() {
@@ -25,7 +35,8 @@ class App extends Component {
                     <h1 className="title">~Trellau~</h1>
                 </nav>
                 <AddTasks addTask={this.addTask}/>
-                <NewTasks tasks={this.state.tasks}/>
+                <NewTasks tasks={this.state.tasks} />
+                <footer id="chau">Made with Love</footer>
             </div>
         );
     }
