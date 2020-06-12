@@ -33,8 +33,11 @@ class TaskItem extends React.Component {
     };
 
     keyPress = (e) => {
+        if (e.key === 'Enter') {
+            this.finishEditing()
+        }
     }
-    handleChange =(e) => {
+    handleChange = (e) => {
         this.setState({input: e.target.value})
     }
 
@@ -44,9 +47,9 @@ class TaskItem extends React.Component {
             <div className="task">
                 <p onClick={this.clickTitle} className="titleTask">{this.props.task.todo}</p>
                 {!this.props.task.done &&
-                    <button onClick={this.done} className="done">Done
-                        <i className="fa fa-check"></i>
-                    </button>
+                <button onClick={this.done} className="done">Done
+                    <i className="fa fa-check"></i>
+                </button>
                 }
                 <button onClick={this.remove} className="delete">Delete
                     <i className="fa fa-trash"></i>
@@ -57,10 +60,10 @@ class TaskItem extends React.Component {
         const editMode =
             <div className="task">
                 <p className="editTitle">Edit your task</p>
-                <input className="input" onKeyPress={this.keyPress} defaultValue={this.props.task.todo} onChange={this.handleChange}/>
-                <button className="editButton" onClick={this.finishEditing}>
-                    <i className="fa fa-pencil"></i>
-                    Edit </button>
+                <input className="input" onBlur={this.finishEditing} onKeyPress={this.keyPress} defaultValue={this.props.task.todo}
+                       onChange={this.handleChange}/>
+                <button className="editButton" onClick={this.finishEditing}><i className="fa fa-check"></i>
+                </button>
             </div>
 
         return this.state.editMode ? editMode : normalMode

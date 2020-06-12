@@ -80,6 +80,7 @@ i {
 
 
 }
+
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
@@ -88,19 +89,24 @@ i {
 ::-webkit-scrollbar-thumb {
     background-color: #e1e187;
 }
+
 .edit {
     background-color: yellow;
     margin: 20px;
     font-weight: bolder;
 
 }
-.editTitle{
+
+.editTitle {
     font-weight: bolder;
     font-size: 18px;
 }
-.editButton{
+
+.editButton {
     font-weight: bolder;
     padding: 5px;
-    background-color: #ffff0094;
+    background-color: #48c9a5;
     margin: 10px;
+    border-radius: 20%;
+    box-shadow: 1px 1px 5px grey;
 }

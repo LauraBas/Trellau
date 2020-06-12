@@ -11,14 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d33a85b7-d189-4d1f-973a-6b1ae5e56e77" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/trellau.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NewTask.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewTask.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TaskItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TaskItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TaskList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TaskList.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +65,7 @@
       <workItem from="1591801110692" duration="39142000" />
       <workItem from="1591897575582" duration="1003000" />
       <workItem from="1591912430479" duration="10000" />
-      <workItem from="1591912447616" duration="9687000" />
+      <workItem from="1591912447616" duration="10784000" />
     </task>
     <servers />
   </component>
