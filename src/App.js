@@ -13,6 +13,7 @@ class App extends Component {
         this.addTask = this.addTask.bind(this);
         this.onRemove = this.onRemove.bind(this);
         this.onDone = this.onDone.bind(this);
+        this.onChangeName = this.onChangeName.bind(this);
     }
 
     generateId() {
@@ -47,6 +48,17 @@ class App extends Component {
         this.setState({tasks: temp})
     }
 
+    onChangeName(id, name) {
+        let tasksCopy = [...this.state.tasks];
+        let task = tasksCopy.find((t) => id === t.id);
+        task.todo = name;
+        this.setState({tasks: tasksCopy})
+
+    }
+
+    clickTitle(str) {
+    }
+
     render() {
         return (
             <div>
@@ -56,13 +68,19 @@ class App extends Component {
                 <AddTasks addTask={this.addTask}/>
                 <div className="subcontainer">
                     <div className="hacer">
-                        <TaskList tasks={this.state.tasks.filter((task) => !task.done)} onRemove={this.onRemove}
-                                  onDone={this.onDone}/>
+                        <TaskList
+                            tasks={this.state.tasks.filter((task) => !task.done)}
+                            onRemove={this.onRemove}
+                            onDone={this.onDone}
+                            clickTitle={this.clickTitle}
+                            onkeyPress={this.keyPress}
+                            onChangeName={this.onChangeName}
+                        />
                     </div>
-
-                    <div className= "hecho">
+                    <div className="hecho">
                         <TaskList tasks={this.state.tasks.filter((task) => task.done)} onRemove={this.onRemove}
-                                  onDone={this.onDone}/>
+                                  onDone={this.onDone}
+                        />
                     </div>
                 </div>
                 <footer id="chau">Made with Love</footer>
